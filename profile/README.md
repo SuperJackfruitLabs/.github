@@ -16,13 +16,13 @@ The through-line is **multi-agent systems that a human can actually operate** �
 
 A fleet/facilities console for agent runtimes. One place to manage the environments agents live in — filesystem, logs, terminal, config, health, lifecycle, cleanup, provisioning — across machines, harnesses, and NAT boundaries. **Attach-first**: point it at runtimes you already run, or let it provision new ones.
 
-Go node-agent (dials out, no inbound ports) → Bun + Hono + Postgres hub → SvelteKit console. Ships descriptors for Hermes, OpenClaw, Claude Code, Codex, and OpenCode. Self-hostable.
+Go node-agent (dials out, no inbound ports) → Bun + Hono + Postgres hub → SvelteKit console. Ships descriptors for Hermes, OpenClaw, Claude Code, Codex, OpenCode and Pi. Self-hostable.
 
-### [kaambaan](https://github.com/SuperJackfruitLabs/kaambaan) — *wet paint · mind the sparks*
+### [kaambaan](https://github.com/SuperJackfruitLabs/kaambaan) — *lit & steady · open for business*
 
 A multi-tenant Kanban board that orchestrates **external** AI agents — running anywhere, under any harness — through pipeline stages with human approval gates. The board is the control plane; agents bring their own runtime.
 
-**काम** (*kaam*, "work") + **बाण** (*bāṇ*, "arrow") — the arrows of work you fire toward Done. Built on Cloudflare Workers, Durable Objects, D1, Queues. Spec-complete, currently in P0 foundations.
+**काम** (*kaam*, "work") + **बाण** (*bāṇ*, "arrow") — the arrows of work you fire toward Done. Built on Cloudflare Workers, Durable Objects, D1, Queues. Deployed at [kaambaan.dev](https://kaambaan.dev); P0 through P14 have shipped, tagged *First Flight*.
 
 ### [supermessage](https://github.com/SuperJackfruitLabs/supermessage) — *half-lit · enter at your own risk*
 
