@@ -36,6 +36,14 @@ One Rust core, several front ends. `matrix-rust-sdk` and the whole timeline, ren
 
 The repo carries a code-grounded parity analysis against Element, Cinny, FluffyChat and Nheko that will tell you, honestly, when to use one of those instead.
 
+### [supermd](https://github.com/SuperJackfruitLabs/supermd) — *wet paint · mind the sign*
+
+A native, GPU-rendered Markdown editor. Hybrid WYSIWYG — syntax markers hide when your cursor is elsewhere and reveal in place when you touch them — over plain CommonMark on disk, always. Wiki links, backlinks and a force-directed graph of the whole workspace, all computed from your files with no database behind them.
+
+Rust on [GPUI](https://www.gpui.rs), the framework behind Zed. Tables, images and mermaid diagrams render live and dissolve back into source when you touch them; mermaid is native rather than a browser. macOS, Linux and Windows. [supermd.app](https://supermd.app)
+
+The odd one out here — it is a writing tool, not agent infrastructure. It exists because the docs-first rule above means a great deal of time is spent in Markdown, and because it is where this lab learns whether a Rust-native UI stack can carry a real application.
+
 ---
 
 More experiments — MCP servers, odd tools, and things that never fit a category — are catalogued over at [superjackfruit.com](https://superjackfruit.com/).
