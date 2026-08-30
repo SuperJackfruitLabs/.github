@@ -22,13 +22,19 @@ Go node-agent (dials out, no inbound ports) → Bun + Hono + Postgres hub → Sv
 
 A multi-tenant Kanban board that orchestrates **external** AI agents — running anywhere, under any harness — through pipeline stages with human approval gates. The board is the control plane; agents bring their own runtime.
 
+Gates reach a human wherever they are: a card waiting on approval is pushed into Matrix, answered from a phone, and resolved on the board under the identity of whoever answered.
+
 **काम** (*kaam*, "work") + **बाण** (*bāṇ*, "arrow") — the arrows of work you fire toward Done. Built on Cloudflare Workers, Durable Objects, D1, Queues. Deployed at [kaambaan.dev](https://kaambaan.dev); P0 through P14 have shipped, tagged *First Flight*.
 
 ### [supermessage](https://github.com/SuperJackfruitLabs/supermessage) — *half-lit · enter at your own risk*
 
 A cross-platform Matrix client built for rooms whose other occupants are agents as often as people. Agent-aware timeline rendering, approvals-from-chat, and a reading surface rather than a chat log — because agents write at length.
 
-Tauri 2 + matrix-rust-sdk + Svelte 5, one codebase for iOS, Android, macOS, Windows, and Linux. The repo carries a code-grounded parity analysis against Element, Cinny, FluffyChat and Nheko that will tell you, honestly, when to use one of those instead.
+**Approvals from chat work end to end**: a Kaambaan approval gate arrives in the room the work happened in, and answering it resolves the gate on the board *as you* — the decision travels as an event from your own Matrix session, never as a bridge acting on your behalf.
+
+One Rust core, several front ends. `matrix-rust-sdk` and the whole timeline, rendering and event-schema layer live in a shared crate exposed through UniFFI; **iOS is SwiftUI, Android is Jetpack Compose, and desktop is Tauri 2 + Svelte 5**. The parts that must not drift — what a payload means, what is safe to render, which answers a gate accepts — are written once, in Rust, and every platform gets the same answer.
+
+The repo carries a code-grounded parity analysis against Element, Cinny, FluffyChat and Nheko that will tell you, honestly, when to use one of those instead.
 
 ---
 
