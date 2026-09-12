@@ -16,7 +16,7 @@ The through-line is **multi-agent systems that a human can actually operate** �
 
 A fleet/facilities console for agent runtimes. One place to manage the environments agents live in — filesystem, logs, terminal, config, health, lifecycle, cleanup, provisioning — across machines, harnesses, and NAT boundaries. **Attach-first**: point it at runtimes you already run, or let it provision new ones.
 
-Go node-agent (dials out, no inbound ports) → Bun + Hono + Postgres hub → SvelteKit console. Ships descriptors for Hermes, OpenClaw, Claude Code, Codex, OpenCode and Pi. Self-hostable.
+Go node-agent (dials out, no inbound ports) → Bun + Hono + Postgres hub → SvelteKit console. Ships descriptors for Hermes, OpenClaw, Claude Code, Codex, OpenCode and Pi. Self-hostable — [agentpod.dev](https://agentpod.dev), docs at [docs.agentpod.dev](https://docs.agentpod.dev).
 
 ### [kaambaan](https://github.com/SuperJackfruitLabs/kaambaan) — *lit & steady · open for business*
 
@@ -24,7 +24,7 @@ A multi-tenant Kanban board that orchestrates **external** AI agents — running
 
 Gates reach a human wherever they are: a card waiting on approval is pushed into Matrix, answered from a phone, and resolved on the board under the identity of whoever answered.
 
-**काम** (*kaam*, "work") + **बाण** (*bāṇ*, "arrow") — the arrows of work you fire toward Done. Built on Cloudflare Workers, Durable Objects, D1, Queues. Deployed at [kaambaan.dev](https://kaambaan.dev); P0 through P14 have shipped, tagged *First Flight*.
+**काम** (*kaam*, "work") + **बाण** (*bāṇ*, "arrow") — the arrows of work you fire toward Done. Built on Cloudflare Workers, Durable Objects, D1, Queues. The app is at [app.kaambaan.dev](https://app.kaambaan.dev), the docs at [docs.kaambaan.dev](https://docs.kaambaan.dev); P0 through P14 have shipped, tagged *First Flight*.
 
 ### [supermessage](https://github.com/SuperJackfruitLabs/supermessage) — *half-lit · enter at your own risk*
 
@@ -35,6 +35,8 @@ A cross-platform Matrix client built for rooms whose other occupants are agents 
 One Rust core, several front ends. `matrix-rust-sdk` and the whole timeline, rendering and event-schema layer live in a shared crate exposed through UniFFI; **iOS is SwiftUI, Android is Jetpack Compose, and desktop is Tauri 2 + Svelte 5**. The parts that must not drift — what a payload means, what is safe to render, which answers a gate accepts — are written once, in Rust, and every platform gets the same answer.
 
 The repo carries a code-grounded parity analysis against Element, Cinny, FluffyChat and Nheko that will tell you, honestly, when to use one of those instead.
+
+Docs are written and published at [docs.supermessage.dev](https://docs.supermessage.dev); there is no public build yet, and every page says so.
 
 ### [supermd](https://github.com/SuperJackfruitLabs/supermd) — *wet paint · mind the sign*
 
