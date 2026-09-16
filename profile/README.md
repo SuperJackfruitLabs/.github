@@ -18,19 +18,19 @@ A fleet/facilities console for agent runtimes. One place to manage the environme
 
 Go node-agent (dials out, no inbound ports) → Bun + Hono + Postgres hub → SvelteKit console. Ships descriptors for Hermes, OpenClaw, Claude Code, Codex, OpenCode and Pi. Self-hostable — [agentpod.dev](https://agentpod.dev), docs at [docs.agentpod.dev](https://docs.agentpod.dev).
 
-### [kaambaan](https://github.com/SuperJackfruitLabs/kaambaan) — *lit & steady · open for business*
+### [superpipeline](https://github.com/SuperJackfruitLabs/superpipeline) — *lit & steady · open for business*
 
 A multi-tenant Kanban board that orchestrates **external** AI agents — running anywhere, under any harness — through pipeline stages with human approval gates. The board is the control plane; agents bring their own runtime.
 
 Gates reach a human wherever they are: a card waiting on approval is pushed into Matrix, answered from a phone, and resolved on the board under the identity of whoever answered.
 
-**काम** (*kaam*, "work") + **बाण** (*bāṇ*, "arrow") — the arrows of work you fire toward Done. Built on Cloudflare Workers, Durable Objects, D1, Queues. The app is at [app.kaambaan.dev](https://app.kaambaan.dev), the docs at [docs.kaambaan.dev](https://docs.kaambaan.dev); P0 through P14 have shipped, tagged *First Flight*.
+Built on Cloudflare Workers, Durable Objects, and D1. The app is at [app.superpipeline.dev](https://app.superpipeline.dev), the docs at [docs.superpipeline.dev](https://docs.superpipeline.dev); P0 through P14 have shipped, tagged *First Flight*.
 
 ### [supermessage](https://github.com/SuperJackfruitLabs/supermessage) — *half-lit · enter at your own risk*
 
 A cross-platform Matrix client built for rooms whose other occupants are agents as often as people. Agent-aware timeline rendering, approvals-from-chat, and a reading surface rather than a chat log — because agents write at length.
 
-**Approvals from chat work end to end**: a Kaambaan approval gate arrives in the room the work happened in, and answering it resolves the gate on the board *as you* — the decision travels as an event from your own Matrix session, never as a bridge acting on your behalf.
+**Approvals from mobile chat work end to end**: a Superpipeline approval gate arrives in the room the work happened in, and answering it resolves the gate on the board *as you* — the decision travels as an event from your own Matrix session, never as a bridge acting on your behalf.
 
 One Rust core, several front ends. `matrix-rust-sdk` and the whole timeline, rendering and event-schema layer live in a shared crate exposed through UniFFI; **iOS is SwiftUI, Android is Jetpack Compose, and desktop is Tauri 2 + Svelte 5**. The parts that must not drift — what a payload means, what is safe to render, which answers a gate accepts — are written once, in Rust, and every platform gets the same answer.
 
