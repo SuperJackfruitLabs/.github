@@ -25,11 +25,17 @@ its README and releases are the place to check current support and limitations.
 | [AgentPod](https://github.com/SuperJackfruitLabs/agentpod) | Manage agent runtimes, sessions, environments, and lifecycle across machines. Go node-agent, Bun/Hono hub, SvelteKit console. | [Setup and status](https://github.com/SuperJackfruitLabs/agentpod#readme) · [Releases](https://github.com/SuperJackfruitLabs/agentpod/releases) |
 | [Superpipeline](https://github.com/SuperJackfruitLabs/superpipeline) | Coordinate external agents through boards, pipeline stages, runs, and human approval gates. Cloudflare Workers, Durable Objects, and D1. | [Setup and status](https://github.com/SuperJackfruitLabs/superpipeline#readme) · [Docs](https://docs.superpipeline.dev) |
 | [Supermessage](https://github.com/SuperJackfruitLabs/supermessage) | Matrix chat for people and agents, with a shared Rust core, Tauri/Svelte desktop, SwiftUI iOS, and Compose Android clients. | [Platform status](https://github.com/SuperJackfruitLabs/supermessage#readme) · [Desktop releases](https://github.com/SuperJackfruitLabs/supermessage/releases) |
+| [Superwitness](https://github.com/SuperJackfruitLabs/superwitness) | Observability and evaluation for agent fleets: what an agent did, how the product ran, and whether the work was good, joined on one run. Early (v0.0.x). | [Setup and status](https://github.com/SuperJackfruitLabs/superwitness#readme) · [Docs](https://docs.superwitness.dev) |
 | [SuperMD](https://github.com/SuperJackfruitLabs/supermd) | A native Rust/GPUI Markdown editor with plain files, live formatting, wiki links, backlinks, and a workspace graph. | [Features and screenshots](https://github.com/SuperJackfruitLabs/supermd#readme) · [Downloads](https://github.com/SuperJackfruitLabs/supermd/releases) |
 
 Supermessage has public desktop builds for Linux, macOS, and Windows; native
 mobile source is separate from mobile store availability. Read its release and
 platform notes before choosing a build.
+
+[Agentnagar](https://github.com/SuperJackfruitLabs/agentnagar) is the lab's experiment
+rather than a product: a maker village, shared by people and agents, that can grow
+into a city. Today it holds design documents, browser planning prototypes and a
+pre-release Godot client on fixture data; there is no hosted city yet.
 
 SuperMD is the writing tool in the suite: this lab spends a great deal of time
 in Markdown, and it is where a Rust-native UI stack gets tested against the
