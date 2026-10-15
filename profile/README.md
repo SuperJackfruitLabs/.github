@@ -27,10 +27,18 @@ its README and releases are the place to check current support and limitations.
 | [Supermessage](https://github.com/SuperJackfruitLabs/supermessage) | Matrix chat for people and agents, with a shared Rust core, Tauri/Svelte desktop, SwiftUI iOS, and Compose Android clients. | [Platform status](https://github.com/SuperJackfruitLabs/supermessage#readme) · [Desktop releases](https://github.com/SuperJackfruitLabs/supermessage/releases) |
 | [Superwitness](https://github.com/SuperJackfruitLabs/superwitness) | Observability and evaluation for agent fleets: what an agent did, how the product ran, and whether the work was good, joined on one run. Early (v0.0.x). | [Setup and status](https://github.com/SuperJackfruitLabs/superwitness#readme) · [Docs](https://docs.superwitness.dev) |
 | [SuperMD](https://github.com/SuperJackfruitLabs/supermd) | A native Rust/GPUI Markdown editor with plain files, live formatting, wiki links, backlinks, and a workspace graph. | [Features and screenshots](https://github.com/SuperJackfruitLabs/supermd#readme) · [Downloads](https://github.com/SuperJackfruitLabs/supermd/releases) |
+| [Supertoolkit](https://github.com/SuperJackfruitLabs/supertoolkit) | A credential broker for agents: the agent asks for an effect by name and never holds the secret that causes it. Go, one binary, self-hosted. Early (v0.0.x). | [Setup and limitations](https://github.com/SuperJackfruitLabs/supertoolkit#readme) · [Docs](https://docs.supertoolkit.dev) |
 
 Supermessage has public desktop builds for Linux, macOS, and Windows; native
 mobile source is separate from mobile store availability. Read its release and
 platform notes before choosing a build.
+
+Supertoolkit is new and deliberately narrow. Its one failure mode that cannot
+be fixed — a client that ignores proxy configuration goes around the broker and
+fails silently — is documented, and `stk doctor --probe` detects it from
+outside. Read
+[its limitations](https://github.com/SuperJackfruitLabs/supertoolkit/blob/main/docs/limitations.md)
+before trusting it with a credential that matters.
 
 [Agentnagar](https://github.com/SuperJackfruitLabs/agentnagar) is the lab's experiment
 rather than a product: a maker village, shared by people and agents, that can grow
