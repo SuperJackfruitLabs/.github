@@ -23,22 +23,31 @@ its README and releases are the place to check current support and limitations.
 | Product | What it does | Start here |
 |---|---|---|
 | [AgentPod](https://github.com/SuperJackfruitLabs/agentpod) | Manage agent runtimes, sessions, environments, and lifecycle across machines. Go node-agent, Bun/Hono hub, SvelteKit console. | [Setup and status](https://github.com/SuperJackfruitLabs/agentpod#readme) · [Releases](https://github.com/SuperJackfruitLabs/agentpod/releases) |
-| [Superpipeline](https://github.com/SuperJackfruitLabs/superpipeline) | Coordinate external agents through boards, pipeline stages, runs, and human approval gates. Cloudflare Workers, Durable Objects, and D1. | [Setup and status](https://github.com/SuperJackfruitLabs/superpipeline#readme) · [Docs](https://docs.superpipeline.dev) |
-| [Supermessage](https://github.com/SuperJackfruitLabs/supermessage) | Matrix chat for people and agents, with a shared Rust core, Tauri/Svelte desktop, SwiftUI iOS, and Compose Android clients. | [Platform status](https://github.com/SuperJackfruitLabs/supermessage#readme) · [Desktop releases](https://github.com/SuperJackfruitLabs/supermessage/releases) |
-| [Superwitness](https://github.com/SuperJackfruitLabs/superwitness) | Observability and evaluation for agent fleets: what an agent did, how the product ran, and whether the work was good, joined on one run. Early (v0.0.x). | [Setup and status](https://github.com/SuperJackfruitLabs/superwitness#readme) · [Docs](https://docs.superwitness.dev) |
+| [SuperPipeline](https://github.com/SuperJackfruitLabs/superpipeline) | Coordinate external agents through boards, pipeline stages, runs, and human approval gates. Cloudflare Workers, Durable Objects, and D1. | [Setup and status](https://github.com/SuperJackfruitLabs/superpipeline#readme) · [Docs](https://docs.superpipeline.dev) |
+| [SuperMessage](https://github.com/SuperJackfruitLabs/supermessage) | Matrix chat for people and agents, with a shared Rust core, Tauri/Svelte desktop, SwiftUI iOS, and Compose Android clients. | [Platform status](https://github.com/SuperJackfruitLabs/supermessage#readme) · [Desktop releases](https://github.com/SuperJackfruitLabs/supermessage/releases) |
+| [SuperWitness](https://github.com/SuperJackfruitLabs/superwitness) | Observability and evaluation for agent fleets: what an agent did, how the product ran, and whether the work was good, joined on one run. Early (v0.0.x). | [Setup and status](https://github.com/SuperJackfruitLabs/superwitness#readme) · [Docs](https://docs.superwitness.dev) |
+| [SuperLibrary](https://github.com/SuperJackfruitLabs/superlibrary) | The memory of the stack: what agents made and what work was done, for agents to consult and people to browse. | [Setup and status](https://github.com/SuperJackfruitLabs/superlibrary#readme) · [Docs](https://docs.superlibrary.dev) |
+| [Salaam](https://github.com/SuperJackfruitLabs/salaam) | A persistent agent session service built on Pi, with durable state and readiness controls. | [Setup and status](https://github.com/SuperJackfruitLabs/salaam#readme) · [salaam.sh](https://salaam.sh) |
+| [SuperExchange](https://github.com/SuperJackfruitLabs/superexchange) | A Matrix appservice that carries board work into chat (gates, questions, waiting cards) and the answers back, as the person who answered. Early. | [Setup and status](https://github.com/SuperJackfruitLabs/superexchange#readme) |
+| [SuperDispatch](https://github.com/SuperJackfruitLabs/superdispatch) | Decides which agent takes a card, by capability, load and history, and records every decision with its reasons. Roster and supply changes stay advice for a person. Early. | [Setup and status](https://github.com/SuperJackfruitLabs/superdispatch#readme) |
 | [SuperMD](https://github.com/SuperJackfruitLabs/supermd) | A native Rust/GPUI Markdown editor with plain files, live formatting, wiki links, backlinks, and a workspace graph. | [Features and screenshots](https://github.com/SuperJackfruitLabs/supermd#readme) · [Downloads](https://github.com/SuperJackfruitLabs/supermd/releases) |
-| [Supertoolkit](https://github.com/SuperJackfruitLabs/supertoolkit) | A credential broker for agents: the agent asks for an effect by name and never holds the secret that causes it. Go, one binary, self-hosted. Early (v0.0.x). | [Setup and limitations](https://github.com/SuperJackfruitLabs/supertoolkit#readme) · [Docs](https://docs.supertoolkit.dev) |
+| [SuperToolkit](https://github.com/SuperJackfruitLabs/supertoolkit) | A credential broker for agents: the agent asks for an effect by name and never holds the secret that causes it. Go, one binary, self-hosted. Early (v0.0.x). | [Setup and limitations](https://github.com/SuperJackfruitLabs/supertoolkit#readme) · [Docs](https://docs.supertoolkit.dev) |
 
-Supermessage has public desktop builds for Linux, macOS, and Windows; native
+SuperMessage has public desktop builds for Linux, macOS, and Windows; native
 mobile source is separate from mobile store availability. Read its release and
 platform notes before choosing a build.
 
-Supertoolkit is new and deliberately narrow. Its one failure mode that cannot
+SuperToolkit is new and deliberately narrow. Its one failure mode that cannot
 be fixed — a client that ignores proxy configuration goes around the broker and
 fails silently — is documented, and `stk doctor --probe` detects it from
 outside. Read
 [its limitations](https://github.com/SuperJackfruitLabs/supertoolkit/blob/main/docs/limitations.md)
 before trusting it with a credential that matters.
+
+[Treaty](https://github.com/SuperJackfruitLabs/treaty) holds the contracts between the products
+as code: the event envelope, schemas and fixtures, published as
+[`@superjackfruitlabs` packages on npm](https://www.npmjs.com/org/superjackfruitlabs), and the
+event relay that carries them.
 
 [Agentnagar](https://github.com/SuperJackfruitLabs/agentnagar) is the lab's experiment
 rather than a product: a maker village, shared by people and agents, that can grow
