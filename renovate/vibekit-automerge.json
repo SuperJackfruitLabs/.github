@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "The vibekit preset, merged by Renovate once every status check on the pull request has passed. For repositories that merge on green; never for operator-reviewed ones. Renovate's own automerge, not the platform's: it refuses to merge while a check is pending or failing, or when the pull request has no checks at all, whatever the branch protection says.",
+  "extends": ["github>SuperJackfruitLabs/.github//renovate/vibekit"],
+  "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": [
+        "@superjackfruitlabs/vibekit-ui",
+        "@superjackfruitlabs/vibekit-frame",
+        "@superjackfruitlabs/vibekit-docs"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": false
+    }
+  ]
+}
