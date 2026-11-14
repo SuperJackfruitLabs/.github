@@ -1,0 +1,32 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "vibekit, the suite's design layer, and nothing else: one grouped pull request when @superjackfruitlabs/vibekit-ui, @superjackfruitlabs/vibekit-frame or @superjackfruitlabs/vibekit-docs publishes a new version. It never merges; repositories that merge on green extend vibekit-automerge instead.",
+  "enabledManagers": ["npm"],
+  "dependencyDashboard": false,
+  "lockFileMaintenance": { "enabled": false },
+  "semanticCommits": "disabled",
+  "prHourlyLimit": 0,
+  "packageRules": [
+    {
+      "description": "Every other dependency stays as the repository has it: no other pull requests.",
+      "matchPackageNames": ["*"],
+      "enabled": false
+    },
+    {
+      "description": "The three vibekit packages, together in one pull request, keeping each range's ^ and moving it to the new version.",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": [
+        "@superjackfruitlabs/vibekit-ui",
+        "@superjackfruitlabs/vibekit-frame",
+        "@superjackfruitlabs/vibekit-docs"
+      ],
+      "enabled": true,
+      "groupName": "vibekit",
+      "groupSlug": "vibekit",
+      "separateMajorMinor": false,
+      "separateMultipleMajor": false,
+      "rangeStrategy": "bump",
+      "automerge": false
+    }
+  ]
+}
